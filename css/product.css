@@ -1,0 +1,40 @@
+.main-product .section-content{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
+
+@media(max-width: 700px){
+	.main-product .section-content{
+		display: block;
+	}
+
+}
+
+.product-table{
+	width: 50%;
+}
+
+main img{
+	min-width: 90%;
+	max-width: 100%;
+	padding: 5px;
+}
+#pay{
+	padding: 10px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+
+.product-text{
+	grid-column: 1;
+}.product-img{
+	grid-column: 2;
+}
+
+
+#payWindow{
+	background-color: RGBA(200,200,200,0.8)
+}
+
