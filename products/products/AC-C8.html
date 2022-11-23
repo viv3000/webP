@@ -4,12 +4,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="images/x-icon" href="../img/ss.ico">
-		<link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.css">
-		<link rel="stylesheet" href="../css/master.css">
-		<link rel="stylesheet" href="../css/block-set.css">
-		<link rel="stylesheet" href="../css/categoryes.css">
-		<title>SS-Shop</title>
+		<link rel="icon" type="images/x-icon" href="../../img/ss.ico">
+		<link rel="stylesheet" href="../../css/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="../../css/master.css">
+		<link rel="stylesheet" href="../../css/product.css">
+		<link rel="stylesheet" href="../../css/login.css">
+		<title>AF-B7</title>
 	</head>
 
 	<body>
@@ -24,8 +24,8 @@
 			<div class="header-content">
 				<section class="header-icon">
 					<div class="section-content">
-						<a href="../index.html">
-						<img alt="super-ship" src="../img/super-ship.ico">
+						<a href="../../index.html">
+						<img alt="super-ship" src="../../img/super-ship.ico">
 						</a>
 					</div>
 				</section>
@@ -38,7 +38,7 @@
 	
 				<section class="header-login">
 					<div class="section-content">
-						<a class="button" href="../login/login.html">Авторизоваться</a>
+						<a class="button" href="../../login/login.html">Авторизоваться</a>
 					</div>
 				</section>
 			</div>
@@ -61,11 +61,11 @@
 						<div class="dropdown">
 							<button class="button dropdown-button">Главные разделы</button>
 							<div class="dropdown-content">
-								<a href="../products/products.html">Продукты</a>
-								<a href="../account/account.html">Акаунт</a>
-								<a href="../support/support.html">Техническая поддержка</a>
-								<a href="../news/news.html">Новости</a>
-								<a href="../about_company/about_company.html">О компании</a>
+								<a href="../../products/products.html">Продукты</a>
+								<a href="../../account/account.html">Акаунт</a>
+								<a href="../../support/support.html">Техническая поддержка</a>
+								<a href="../../news/news.html">Новости</a>
+								<a href="../../about_company/about_company.html">О компании</a>
 							</div>
 						</div>
 					</div>
@@ -75,20 +75,59 @@
 
 		<main>
 			<div class="main-content">
-				<div class="main-lines">
-					<section class="main-block-1">
-						<div class="section-content">
-							<h2><a href="">На данный момент в этой категории ничего нет</a></h2>
-							<p></p>
-							<img max src="../img/"/>
+				<section class="main-product">
+					<div class="section-content">
+						<div class="product-text">
+							<h2>AC-C8</h2>
+							<p>Устаревший корабль-авианосец</p>
+
 						</div>
-					</section>
+						<img class="product-img" src="../../img/carrier.jpg">
+					</div>
+					<div class="product-table">
+							<table  class="table table-dark">
+							<tr> 
+								<th>Характеристика</th>
+								<th>Значение</th>
+							</tr>
+							<tr> 
+								<td>ГП</td>
+								<td>80</td>
+							</tr>
+							<tr> 
+								<td>СВ</td>
+								<td>40</td>
+							</tr>
+							<tr> 
+								<td>Цена</td>
+								<td>200000000</td>
+							</tr>
+							</table>
+						</div>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#payWindow">Купить</button>
+						<button class="btn btn-primary">В корзину</button>
+				</section>
 
 
-				</div>
+				<section class="main-login-section modal fade" id="payWindow">
+					<div class="section-content">
+						<hr>
+						<form class="form-group" method="POST" id="pay">  
+							<p>Оплата</p>
+							<label for="number">номер карты</label>
+							<input class="form-control" id="number" type="text" name="number" placeholder="0000 0000 0000 0000" minlength="19" maxlength="19"> <br>
+							<label for="date">Дата</label>
+							<input class="form-control" type="text" name="date" placeholder="MM/YY" id="date" minlength="5" maxlength="5"><br>
+							<label for="CVC">CVC</label>
+							<input class="form-control" id="CVC" type="password" name="CVV" placeholder="000" maxlength="3" minlength="3"> <br>
+						</form>
+							<button onclick="checkAndSubmitForm()" class="btn btn-primary" name="submit-login">покупка</button>
+					</div>
+				</section>
+
+
 
 			</div>
-
 		</main>
 
 		<footer>
@@ -122,3 +161,19 @@
 		</footer>
 	</body>
 </html>
+
+			<script>
+				var checkAndSubmitForm = () => {
+					if(document.getElementsByTagName("input")[1].value == '') { 
+						alert("номер не заполнен")
+					}else if (document.getElementsByTagName("input")[2].value == '') {
+						alert("Дата не заполнена")
+					}else if (document.getElementsByTagName("input")[3].value == '') {
+						alert("CVC не заполнен")
+					}else{
+						document.getElementById("pay").submit()
+					}
+				}
+
+			</script>
+
