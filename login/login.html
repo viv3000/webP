@@ -7,6 +7,7 @@
 		<link rel="icon" type="images/x-icon" href="../img/ss.ico">
 		<link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="../css/master.css">
+		<link rel="stylesheet" href="../css/login.css">
 		<title>SS-Shop</title>
 	</head>
 
@@ -75,11 +76,17 @@
 			<div class="main-content">
 				<section class="main-login-section">
 					<div class="section-content">
+						<p>Вход</p>
+						<hr>
 						<form class="form-group" method="POST">  
 							<label for="login">Имя</label>       <input class="form-control" id="login"    type="login"    name="login"    placeholder="Login"> <br>
 							<label for="password">Пароль</label> <input class="form-control" id="password" type="password" name="password" placeholder="Password"> <br>
-							<input  class="btn btn-primary" type="submit" name="submit-login" value="submit" text="asdf">
 						</form>
+							<button onclick="checkAndSubmitForm()" class="btn btn-primary" name="submit-login">Создание</button>
+						<a>Забыли пороль</a>
+						<hr>
+						<p>Новый пользователь?</p>
+						<button onclick="document.location.href='logup.html'" class="btn btn-primary">Зарегестрироваться</button>
 					</div>
 				</section>
 			</div>
@@ -116,3 +123,15 @@
 		</footer>
 	</body>
 </html>
+			<script>
+				var checkAndSubmitForm = () => {
+					if(document.getElementsByTagName("input")[1].value == '') { 
+						alert("Имя не заполнено")
+					}else if (document.getElementsByTagName("input")[2].value == '') {
+						alert("Пороль не заполнен")
+					}else{
+						document.getElementById("logup").submit()
+					}
+				}
+
+			</script>

@@ -1,0 +1,15 @@
+@media(max-width: 2048px){
+	.main-login-section .section-content{
+		margin-left:30%;
+		margin-right: 30%;
+	}
+}@media(max-width: 700px){
+	.main-login-section .section-content{
+		margin-right:5%;
+		margin-left: 5%;
+	}
+}
+
+
+
+
