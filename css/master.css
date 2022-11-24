@@ -87,6 +87,38 @@ header h1{
 	margin-right: 10px;
 }
 
+.header-icon img{
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-name: header-animation;
+}
+
+@keyframes header-animation {
+	from {
+		transform: rotate(0turn);
+		filter: blur(0px);
+	}
+
+	25%{
+		
+		filter: blur(20px);
+	}
+
+	50%{
+		transform: rotate(3turn);
+		filter: blur(0px);
+	}
+
+	75%{
+		
+		filter: blur(20px);
+	}
+  
+	to {
+		transform: rotate(0turn);
+		filter: blur(0px);
+	}
+}
 
 /*header end*/
 
