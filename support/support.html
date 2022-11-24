@@ -7,6 +7,7 @@
 		<link rel="icon" type="images/x-icon" href="../img/ss.ico">
 		<link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="../css/master.css">
+		<link rel="stylesheet" href="../css/login.css">
 		<title>SS-Shop</title>
 	</head>
 
@@ -59,11 +60,11 @@
 						<div class="dropdown">
 							<button class="button dropdown-button">Главные разделы</button>
 							<div class="dropdown-content">
+								<a href="../account/care.html">Корзина</a>
 								<a href="../products/products.html">Продукты</a>
-								<a href="../account/account.html">Акаунт</a>
+								<a href="../categoryes/categoryes.html">Категории</a>
 								<a href="../support/support.html">Техническая поддержка</a>
-								<a href="../news/news.html">Новости</a>
-								<a href="../about_company/about_company.html">О компании</a>
+								<a href="../blog/blog.html">Новости</a>
 							</div>
 						</div>
 					</div>
@@ -72,7 +73,19 @@
 		</nav>
 
 		<main>
-
+			<div class="main-content">
+				<section class="main-login-section">
+					<div class="section-content">
+						<p>Задать вопрос</p>
+						<hr>
+						<form id="question" class="form-group" method="POST">  
+							<label for="email">Email</label>       <input class="form-control" id="email"    type="email"    name="login"    placeholder="email"> <br>
+							<label for="question">Вопрос</label> <textarea class="form-control" id="password" type="text" name="password" placeholder="Вопрос"></textarea> <br>
+						</form>
+							<button onclick="checkAndSubmitForm()" class="btn btn-primary" name="submit-login">Задать</button>
+					</div>
+				</section>
+			</div>
 		</main>
 
 		<footer>
@@ -106,3 +119,15 @@
 		</footer>
 	</body>
 </html>
+			<script>
+				var checkAndSubmitForm = () => {
+					if(document.getElementsByTagName("input")[1].value == '') { 
+						alert("Email не заполнено")
+					}else if (document.getElementsByTagName("textarea")[0].value == '') {
+						alert("Вопрос не заполнен")
+					}else{
+						document.getElementById("question").submit()
+					}
+				}
+
+			</script>
