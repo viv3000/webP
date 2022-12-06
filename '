@@ -23,18 +23,14 @@ function time(){
 	document.getElementById('timer').innerHTML = 'Текущее время: ' + formattedDate;
 }
 
-var imgState = 0;
-
 function ImageChange(){
-	if (imgState == 0){
-		var images = ['js/img/i1.ico', 'js/img/i2.ico', 'js/img/i3.ico'];
-		var i = 1;
-		var length = images.length
-		setInterval(function() {
-		if(i== length) i= 0
-		document.getElementById('img').src = images[i++];
-		}, 2000);
-	}
+	var images = ['js/img/i1.ico', 'js/img/i2.ico', 'js/img/i3.ico'];
+	var i = 1;
+	var length = images.length
+	setInterval(function() {
+	if(i== length) i= 0
+	document.getElementById('img').src = images[i++];
+	}, 2000);
 }
 
 function Start(){
@@ -57,16 +53,4 @@ document.getElementById('yandex-href').onclick = function(){
 	if (confirm('Перейти по ссылке?')){
 		document.location.href='https://yandex.ru';
 	}
-}
-
-
-document.getElementById('for-my-name').style.textAlign = 'right';
-document.getElementById('for-my-name').style.fontFamily = 'Arial';
-
-document.getElementById('img').onmouseover = () =>{
-	imgState=1
-	document.getElementById('img').src = 'js/img/i1.ico';
-}
-document.getElementById('img').onmouseout = () =>{
-	imgState=0
 }

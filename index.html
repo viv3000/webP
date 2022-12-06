@@ -11,7 +11,7 @@
 		<title>SS-Shop</title>
 	</head>
 
-	<body>
+	<body onload="Start()" >
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 			</script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
@@ -25,14 +25,14 @@
 				<section class="header-icon">
 					<div class="section-content">
 						<a href="">
-						<img alt="super-ship" src="img/super-ship.ico">
+						<img id='img' alt="super-ship" src="img/super-ship.ico">
 						</a>
 					</div>
 				</section>
 	
 				<section class="header-short-description">
 					<div class="section-content">
-						<h1>Купи космический корабль от лучших поставщиков SS-shop.com</h1>
+						<h1 id="text">Купи космический корабль от лучших поставщиков SS-shop.com</h1>
 					</div>
 				</section>
 	
@@ -189,6 +189,8 @@
 				<section class="footer-coyright">
 					<div class="section-content">
 						<p>© copyright 2022-3022 SS-shop.com</p>
+						<p id="timer"></p>
+						<p id="yandex-href">yandex.ru</p>
 					</div>
 				</section>
 
