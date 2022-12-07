@@ -43,6 +43,7 @@ function Start(){
 }
 
 document.getElementById('for-my-name').style.backgroundColor = 'red';
+document.getElementById('for-my-name').style.color = 'green';
 //case2 end
 //case3 begin
 
